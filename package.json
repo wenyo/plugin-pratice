@@ -2,7 +2,9 @@
   "name": "clone",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "jsnext:main": "dist/index.esm.js",
+  "module": "dist/index.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:self": "rollup -c config/rollup.config.js",
@@ -11,7 +13,8 @@
     "build": "npm run build:self && npm run build:esm && npm run build:aio"
   },
   "author": "wenyou",
-  "license": "ISC",
+  "license": "MIT",
+  "sideEffects": false,
   "devDependencies": {
     "rollup": "^0.57.1",
     "rollup-plugin-node-resolve": "^3.0.3"
